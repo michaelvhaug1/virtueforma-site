@@ -190,6 +190,28 @@
       }
     }
   </style>
+
+  <script>
+    function openApp(event) {
+      // On mobile, just navigate normally
+      if (window.innerWidth <= 480) {
+        return true;
+      }
+
+      // On desktop, open in a mobile-sized popup window
+      event.preventDefault();
+      const width = 390;
+      const height = 844;
+      const left = (screen.width - width) / 2;
+      const top = (screen.height - height) / 2;
+
+      window.open(
+        '/app',
+        'FormaApp',
+        `width=${width},height=${height},left=${left},top=${top},menubar=no,toolbar=no,location=no,status=no,resizable=yes,scrollbars=yes`
+      );
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -231,7 +253,7 @@
     <div class="beta-badge">Beta Access: Free during launch</div>
 
     <!-- CTA -->
-    <a href="/app" class="cta-button">Get Started</a>
+    <a href="/app" class="cta-button" onclick="openApp(event)">Get Started</a>
 
     <!-- Footer -->
     <footer class="footer">
