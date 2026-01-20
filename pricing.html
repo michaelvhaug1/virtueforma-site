@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - Forma</title>
+  <meta name="description" content="Forma pricing plans for individuals, families, and organizations. Premium by design, priced for the whole Church.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo-green.png">
+
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-green: #1F7A4D;
+      --primary-green-light: #E6F4EE;
+      --bg-color: #F7F6F3;
+      --text-primary: #1B1B1B;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
+      --surface: #FFFFFF;
+      --border: #E0E0E0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      margin-bottom: 24px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--text-primary);
+    }
+
+    .headline {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .subheadline {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Pricing Grid */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .pricing-card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card.featured {
+      border: 2px solid var(--primary-green);
+      position: relative;
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary-green);
+      color: white;
+      padding: 4px 16px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .plan-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .plan-description {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .price-amount {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .price-period {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .price-note {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-bottom: 20px;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .features-list li svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--primary-green);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .cta-button {
+      display: block;
+      background-color: var(--primary-green);
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 24px;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 122, 77, 0.3);
+    }
+
+    .cta-button.secondary {
+      background-color: transparent;
+      color: var(--primary-green);
+      border: 2px solid var(--primary-green);
+    }
+
+    .cta-button.secondary:hover {
+      background-color: var(--primary-green-light);
+    }
+
+    /* Clergy Section */
+    .clergy-section {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      border: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+
+    .clergy-section h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .clergy-section p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    .footer a {
+      color: var(--primary-green);
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .headline {
+        font-size: 26px;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <a href="/" class="logo-link">
+        <img src="logo-green.png" alt="Forma Logo" class="logo">
+        <span class="brand-name">FORMA</span>
+      </a>
+      <h1 class="headline">Simple, transparent pricing</h1>
+      <p class="subheadline">Premium by design. Priced for the whole Church. 10% of every subscription goes to charity.</p>
+    </header>
+
+    <!-- Pricing Grid -->
+    <div class="pricing-grid">
+      <!-- Individual -->
+      <div class="pricing-card">
+        <h2 class="plan-name">Individual</h2>
+        <p class="plan-description">For personal faith formation</p>
+        <div class="price">
+          <span class="price-amount">$4.99</span>
+          <span class="price-period">/month</span>
+        </div>
+        <p class="price-note">$49.99/year (save 17%)</p>
+        <ul class="features-list">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Daily habit tracking
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Liturgical calendar integration
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Groups and community
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Full analytics and insights
+          </li>
+        </ul>
+        <a href="/app" class="cta-button">Get Started</a>
+      </div>
+
+      <!-- Family -->
+      <div class="pricing-card featured">
+        <span class="featured-badge">Best Value</span>
+        <h2 class="plan-name">Family</h2>
+        <p class="plan-description">For households growing in faith together</p>
+        <div class="price">
+          <span class="price-amount">$14.99</span>
+          <span class="price-period">/month</span>
+        </div>
+        <p class="price-note">Up to 5 members. $24.99/mo for up to 10.</p>
+        <ul class="features-list">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Everything in Individual
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Private family feed
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Family goals and accountability
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Easy member management
+          </li>
+        </ul>
+        <a href="/family" class="cta-button">Learn More</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="pricing-card">
+        <h2 class="plan-name">Enterprise</h2>
+        <p class="plan-description">For parishes, schools, and organizations</p>
+        <div class="price">
+          <span class="price-amount">$79</span>
+          <span class="price-period">/month</span>
+        </div>
+        <p class="price-note">Up to 50 members. Volume pricing available.</p>
+        <ul class="features-list">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Everything in Family
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Custom branding
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Organization-wide goals
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Admin dashboard
+          </li>
+        </ul>
+        <a href="/enterprise" class="cta-button secondary">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- Billing Terms Section -->
+    <div class="clergy-section" style="text-align: left;">
+      <h3 style="text-align: center; margin-bottom: 24px;">Billing & Invoicing Terms</h3>
+
+      <div style="margin-bottom: 16px;">
+        <strong style="color: var(--text-primary);">Manual Invoicing</strong>
+        <p style="margin-top: 4px; max-width: none;">All Family and Organization plans are billed manually. After you create your account, you will receive an invoice via email within 1-2 business days.</p>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <strong style="color: var(--text-primary);">First Invoice Due Within 30 Days</strong>
+        <p style="margin-top: 4px; max-width: none;">Your first invoice is due within 30 days of account creation. You may begin using Forma immediately while your invoice is being processed.</p>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <strong style="color: var(--text-primary);">Account Suspension for Non-Payment</strong>
+        <p style="margin-top: 4px; max-width: none;">VirtueForma reserves the right to suspend or cancel accounts if payment is not received within 30 days of the invoice due date. We will send reminders before any account action is taken.</p>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <strong style="color: var(--text-primary);">Payment Methods</strong>
+        <p style="margin-top: 4px; max-width: none;">We accept payment via credit card, debit card, ACH bank transfer, or check. Payment instructions will be included in your invoice.</p>
+      </div>
+
+      <div style="background: #FFF8E6; border: 1px solid #F5D77A; border-radius: 8px; padding: 16px; margin-top: 24px;">
+        <p style="color: #8B6914; margin: 0; max-width: none;"><strong>Important:</strong> Your organization will be created in "Pending Activation" status. Full access is granted immediately, but your account may be suspended if payment is not received within 30 days of your invoice date.</p>
+      </div>
+    </div>
+
+    <!-- Clergy Section -->
+    <div class="clergy-section">
+      <h3>Free for Priests and Religious</h3>
+      <p>We believe those who serve the Church should have free access to tools that support their ministry. Contact us for a clergy access code.</p>
+      <a href="mailto:hello@virtueforma.faith?subject=Clergy%20Access%20Request" class="cta-button secondary">Request Clergy Access</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 VirtueForma. Made with love for the Church.</p>
+      <p style="margin-top: 8px;"><a href="/">Back to Home</a></p>
+    </footer>
+  </div>
+</body>
+</html>
