@@ -143,10 +143,63 @@
       color: var(--text-secondary);
     }
 
+    .price-starting {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-right: 4px;
+    }
+
     .price-note {
       font-size: 11px;
       color: var(--text-tertiary);
       margin-bottom: 16px;
+    }
+
+    .tier-link {
+      color: var(--primary-green);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .tier-link:hover {
+      color: var(--text-primary);
+    }
+
+    /* Tier table */
+    .tier-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+
+    .tier-table th,
+    .tier-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tier-table th {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-tertiary);
+      background: var(--bg-color);
+    }
+
+    .tier-table td {
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+
+    .tier-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tier-table .tier-price {
+      font-weight: 600;
+      color: var(--primary-green);
     }
 
     .features-list {
@@ -223,14 +276,17 @@
       text-decoration: underline;
     }
 
-    /* Clergy Section - Compact */
+    /* Clergy Section - Compact & Centered */
     .clergy-section {
       background: var(--surface);
       border-radius: 14px;
-      padding: 24px;
+      padding: 24px 32px;
       text-align: center;
       border: 1px solid var(--border);
       margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .clergy-section h3 {
@@ -244,9 +300,10 @@
       font-size: 13px;
       color: var(--text-secondary);
       margin-bottom: 16px;
-      max-width: 380px;
-      margin-left: auto;
-      margin-right: auto;
+    }
+
+    .clergy-section .cta-button {
+      display: inline-block;
     }
 
     /* Footer */
@@ -456,10 +513,11 @@
         <h2 class="plan-name">Enterprise</h2>
         <p class="plan-description">Structured formation for parishes, schools, and organizations</p>
         <div class="price">
+          <span class="price-starting">Starting at</span>
           <span class="price-amount">$79</span>
           <span class="price-period">/month</span>
         </div>
-        <p class="price-note">Up to 50 members. Volume pricing available.</p>
+        <p class="price-note">Tiered by member count. <a class="tier-link" onclick="openModal('tiers-modal')">View tiers</a></p>
         <ul class="features-list">
           <li>
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
@@ -580,6 +638,54 @@
           <button class="cta-button secondary" onclick="closeModal('clergy-modal')">Close</button>
         </p>
       </div>
+    </div>
+  </div>
+
+  <!-- Enterprise Tiers Modal -->
+  <div class="modal-overlay" id="tiers-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('tiers-modal')">&times;</button>
+      <h3>Enterprise Pricing Tiers</h3>
+      <p>Pricing scales by member count. All tiers include the same features.</p>
+
+      <table class="tier-table">
+        <thead>
+          <tr>
+            <th>Members</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Up to 50</td>
+            <td class="tier-price">$79/mo</td>
+          </tr>
+          <tr>
+            <td>Up to 100</td>
+            <td class="tier-price">$149/mo</td>
+          </tr>
+          <tr>
+            <td>Up to 150</td>
+            <td class="tier-price">$199/mo</td>
+          </tr>
+          <tr>
+            <td>Up to 300</td>
+            <td class="tier-price">$349/mo</td>
+          </tr>
+          <tr>
+            <td>300+</td>
+            <td class="tier-price">Contact us</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-size: 12px; color: var(--text-tertiary); margin-top: 16px;">
+        Need a custom solution? <a href="mailto:hello@virtueforma.faith" style="color: var(--primary-green);">Get in touch</a>
+      </p>
+
+      <p style="margin-top: 20px; text-align: center;">
+        <button class="cta-button" onclick="closeModal('tiers-modal')">Got it</button>
+      </p>
     </div>
   </div>
 
