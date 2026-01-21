@@ -299,6 +299,85 @@
       margin-top: 8px;
     }
 
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(247, 246, 243, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .nav-brand span {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-green);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--primary-green);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    .nav-links .nav-cta:hover {
+      opacity: 0.9;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 10px 16px;
+      }
+      .nav-links {
+        gap: 12px;
+      }
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+      body {
+        padding-top: 70px;
+      }
+    }
+
     /* Responsive */
     @media (max-width: 600px) {
       .headline {
@@ -318,7 +397,21 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <!-- Navigation -->
+  <nav>
+    <a href="/" class="nav-brand">
+      <img src="logo-green.png" alt="Forma">
+      <span>FORMA</span>
+    </a>
+    <div class="nav-links">
+      <a href="/pricing.html">Pricing</a>
+      <a href="/family.html">Families</a>
+      <a href="/enterprise.html">Parishes</a>
+      <a href="/app" class="nav-cta">Get Started</a>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top: 60px;">
     <!-- Header -->
     <header class="header">
       <a href="/" class="logo-link">
@@ -469,10 +562,11 @@
     <!-- Footer -->
     <footer class="footer">
       <p>&copy; 2025 VirtueForma. Made with love for the Church.</p>
+      <p>Follow us on <a href="https://instagram.com/virtueformation" target="_blank" rel="noopener">Instagram</a></p>
       <div class="footer-links">
         <a href="/">Home</a>
-        <a href="/pricing">All Pricing</a>
-        <a href="/family">Family Plan</a>
+        <a href="/pricing.html">All Pricing</a>
+        <a href="/family.html">Family Plan</a>
       </div>
     </footer>
   </div>
