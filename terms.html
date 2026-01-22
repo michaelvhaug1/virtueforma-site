@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - Forma by VirtueForma</title>
+  <meta name="description" content="Terms of Service for Forma, a Catholic formation app by VirtueForma.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo-green.png">
+
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-green: #1F7A4D;
+      --primary-green-dark: #165C3A;
+      --primary-green-light: #E6F4EE;
+      --bg-color: #FAFAF9;
+      --text-primary: #1B1B1B;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
+      --surface: #FFFFFF;
+      --border: #E5E5E5;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background: white;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      width: 36px;
+      height: 36px;
+    }
+
+    .nav-brand span {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-primary);
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: var(--primary-green-light);
+      color: var(--primary-green);
+    }
+
+    /* Main Content */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .header-card {
+      background: var(--primary-green-light);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+
+    .header-card h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-green-dark);
+      margin-bottom: 8px;
+    }
+
+    .header-card .subtitle {
+      font-size: 16px;
+      color: var(--primary-green);
+      margin-bottom: 20px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .meta-item {
+      font-size: 14px;
+    }
+
+    .meta-item strong {
+      color: var(--primary-green-dark);
+    }
+
+    .meta-item span {
+      color: var(--text-secondary);
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-green-light);
+    }
+
+    section p, section ul {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    section ul {
+      padding-left: 24px;
+    }
+
+    section li {
+      margin-bottom: 8px;
+    }
+
+    .subsection {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    .subsection h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .legal-caps {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Footer */
+    footer {
+      background: white;
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-green);
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 32px 16px;
+      }
+
+      .header-card {
+        padding: 24px;
+      }
+
+      .header-card h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-brand">
+      <img src="logo-green.png" alt="Forma">
+      <span>FORMA</span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="header-card">
+      <h1>Terms of Service</h1>
+      <p class="subtitle">Forma by VirtueForma</p>
+      <div class="meta-grid">
+        <div class="meta-item"><strong>Effective date:</strong> <span>January 6, 2025</span></div>
+        <div class="meta-item"><strong>Last updated:</strong> <span>January 22, 2025</span></div>
+        <div class="meta-item"><strong>Version:</strong> <span>1.0</span></div>
+        <div class="meta-item"><strong>Operator:</strong> <span>VirtueForma</span></div>
+        <div class="meta-item"><strong>Support:</strong> <span>support@virtueforma.faith</span></div>
+        <div class="meta-item"><strong>Jurisdiction:</strong> <span>United States</span></div>
+      </div>
+    </div>
+
+    <section>
+      <h2>1) What Forma Is (and Is Not)</h2>
+      <p>Forma is a Catholic habit-tracking and community app focused on prayer, worship, formation, and fellowship. It is designed to encourage users through non-invasive activity sharing, groups, and parish community features.</p>
+      <p><strong>Forma is not:</strong></p>
+      <ul>
+        <li>A sacramental tracker</li>
+        <li>A measure of holiness or moral score</li>
+        <li>Spiritual direction or pastoral counseling</li>
+        <li>Medical, mental health, legal, or financial advice</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2) Operator Identity</h2>
+      <p>The Service is operated by VirtueForma. Operator details may be updated as the business structure evolves. Continued use after updates indicates acceptance of the updated Terms.</p>
+    </section>
+
+    <section>
+      <h2>3) Eligibility</h2>
+      <p>You must be at least 13 years old to use the Service.</p>
+      <p>This service is intended for users located in the United States. We may restrict access outside the U.S.</p>
+    </section>
+
+    <section>
+      <h2>4) Accounts and Security</h2>
+      <p>You must sign up with an email address and password and verify your email.</p>
+      <p>You are responsible for maintaining the confidentiality of your credentials and all activity under your account.</p>
+      <p>You agree not to access accounts you do not own or attempt to bypass security controls.</p>
+    </section>
+
+    <section>
+      <h2>5) User Content and Conduct Rules</h2>
+      <p>User-generated content includes (for example): display name, optional parish fields, and optional activity comments.</p>
+      <p><strong>You agree:</strong></p>
+      <ul>
+        <li>Do not post sensitive personal data in comments or profile fields (examples: confession details, sins, intentions, medical/mental health information, phone numbers, addresses, financial information, or children's information).</li>
+        <li>No harassment, threats, shaming, or targeted abuse.</li>
+        <li>No hateful, sexually explicit, unlawful, or otherwise abusive content.</li>
+        <li>No impersonation or misrepresentation of identity or affiliations.</li>
+      </ul>
+      <p>We may apply profanity filtering and other safety measures.</p>
+    </section>
+
+    <section>
+      <h2>6) Visibility, Sharing, and Discovery Features</h2>
+      <p>Forma includes friends, a feed, reactions, badges, groups, parishes, and "friend suggestions."</p>
+
+      <div class="subsection">
+        <h3>A) Global Friend Suggestions</h3>
+        <p>When you are logged in, Forma may suggest other users to help you connect. Suggested users may show limited information such as display name, experience title, level, points, badge count, and join date.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>B) Friends-Only Sharing</h3>
+        <p>When you are friends with someone, the Service may show your display name, activity events in the feed, emoji reactions, badges, nonprofit preference, and parish affiliation.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>C) Groups</h3>
+        <p>Groups are public communities within Forma. Anyone can browse and join public groups. Group owners can post announcements; members can post and react. Groups may be associated with parishes. Group membership is visible to other group members.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>D) Parish Discovery (Privacy-Focused)</h3>
+        <p>The Parish Directory allows you to find parishes and groups associated with them. The Parish Directory does NOT list individual users who attend a parish. You CANNOT be added as a friend directly from a parish screen. Your parish affiliation is visible only to your friends, not publicly.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>E) Hide from Suggestions</h3>
+        <p>By default, your profile is discoverable in friend suggestions. Forma includes a setting to hide your profile from global friend suggestions.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>7) Moderation and Enforcement</h2>
+      <p>We may remove content, restrict features, suspend, or terminate accounts if we believe it's necessary to:</p>
+      <ul>
+        <li>Enforce these Terms</li>
+        <li>Protect users</li>
+        <li>Prevent abuse or fraud</li>
+        <li>Comply with law</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8) Service Availability</h2>
+      <p>You understand:</p>
+      <ul>
+        <li>Features may change or be removed</li>
+        <li>The Service may be intermittently unavailable</li>
+        <li>Data loss is possible despite safeguards</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>9) Subscriptions and Payments</h2>
+
+      <div class="subsection">
+        <h3>A) Subscription Plans</h3>
+        <p>Forma offers optional paid subscriptions:</p>
+        <ul>
+          <li>Monthly: $4.99 per month</li>
+          <li>Yearly: $49.99 per year (discounted)</li>
+        </ul>
+        <p>Subscriptions provide access to premium features as described in the app.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>B) Billing and Auto-Renewal</h3>
+        <p>Subscriptions automatically renew at the end of each billing period unless you cancel before the renewal date.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>C) Payment Processing</h3>
+        <p>Payments are processed through Apple App Store or Google Play. We do not store your full payment card details.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>D) Cancellation</h3>
+        <p>You may cancel your subscription at any time through your device's subscription settings (App Store or Google Play). Cancellation takes effect at the end of your current billing period.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>E) Refunds</h3>
+        <p>Refunds are handled by Apple or Google according to their respective policies. Contact support@virtueforma.faith for assistance.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>10) Charitable Commitment</h2>
+      <p>Forma commits to donating 10% of subscription revenue to charitable nonprofits selected by users.</p>
+      <p>Each user may select a preferred nonprofit from the available options in the app.</p>
+      <p><strong>Note:</strong> Your subscription payment is a payment for services, not a charitable donation. The charitable commitment is made by VirtueForma, not by you. You should not claim your subscription as a tax-deductible charitable contribution.</p>
+    </section>
+
+    <section>
+      <h2>11) Good Faith Submissions</h2>
+      <p>Nonprofit and parish information submitted to the Service must be provided in good faith. Submitting false, misleading, or fraudulent information is a violation of these Terms and may result in account suspension or termination.</p>
+    </section>
+
+    <section>
+      <h2>12) Intellectual Property</h2>
+      <p>We own the Service and its software/design, except your user-generated content. You receive a limited, revocable, non-transferable license to use the Service for personal, non-commercial purposes.</p>
+    </section>
+
+    <section>
+      <h2>13) Your License to Us</h2>
+      <p>You grant us a limited license to host, store, process, and display your content as needed to operate the Service (for example, showing feed events to friends). This license ends when content is deleted from our active systems.</p>
+    </section>
+
+    <section>
+      <h2>14) Disclaimers</h2>
+      <p class="legal-caps">THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE." TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES.</p>
+      <p class="legal-caps">WE DO NOT GUARANTEE UNINTERRUPTED OR ERROR-FREE SERVICE OR THAT CONTENT WILL ALWAYS BE PRESERVED.</p>
+    </section>
+
+    <section>
+      <h2>15) Limitation of Liability</h2>
+      <p class="legal-caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE WILL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, PROFITS, OR GOODWILL.</p>
+      <p class="legal-caps">OUR TOTAL LIABILITY FOR ANY CLAIM RELATING TO THE SERVICE WILL NOT EXCEED THE AMOUNT YOU PAID FOR THE SERVICE IN THE 12 MONTHS PRECEDING THE CLAIM, OR $50, WHICHEVER IS GREATER.</p>
+    </section>
+
+    <section>
+      <h2>16) Account Deletion and Termination</h2>
+      <p>You may request deletion via in-app settings or by emailing support@virtueforma.faith from your verified account email.</p>
+      <p>We aim to complete deletion requests from active systems within 14 days.</p>
+      <p>We may suspend or terminate your account for violations or safety reasons.</p>
+    </section>
+
+    <section>
+      <h2>17) No Advertising</h2>
+      <p>Forma does not display third-party advertisements. We do not accept advertising or paid promotional placements.</p>
+      <p>Forma is independently operated with no outside investors.</p>
+    </section>
+
+    <section>
+      <h2>18) Changes to These Terms</h2>
+      <p>We may update these Terms. We will update the "Last updated" date and version. Material changes may be communicated in-app or by email.</p>
+    </section>
+
+    <section>
+      <h2>19) Governing Law</h2>
+      <p>These Terms are governed by the laws of the State of Washington, United States, excluding conflict-of-law rules.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+    <p class="footer-copyright">
+      &copy; 2025 VirtueForma. All rights reserved.
+    </p>
+  </footer>
+</body>
+</html>
