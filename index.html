@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forma - A Catholic Formation App</title>
-  <meta name="description" content="Faith that ignites daily. A Catholic formation app designed for prayer, discipline, and community.">
+  <title>Forma - Premium Catholic Formation for Your Whole Church</title>
+  <meta name="description" content="A premium Catholic formation app priced for your whole church. Track spiritual habits, build community, and grow together in faith. Start your free 30-day trial.">
 
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Forma - A Catholic Formation App">
-  <meta property="og:description" content="Faith that ignites daily. Designed for prayer, discipline, and community.">
+  <meta property="og:title" content="Forma - Premium Catholic Formation for Your Whole Church">
+  <meta property="og:description" content="A premium Catholic formation app priced for your whole church. Start your free 30-day trial.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://virtueforma.faith">
 
@@ -18,7 +18,7 @@
   <!-- Google Fonts - Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -29,113 +29,38 @@
 
     :root {
       --primary-green: #1F7A4D;
+      --primary-green-dark: #165C3A;
       --primary-green-light: #E6F4EE;
-      --bg-color: #F7F6F3;
+      --bg-color: #FAFAF9;
+      --bg-hero: linear-gradient(180deg, #F7F6F3 0%, #FFFFFF 100%);
       --text-primary: #1B1B1B;
       --text-secondary: #5C5C5C;
       --text-tertiary: #8A8A8A;
       --surface: #FFFFFF;
+      --border: #E5E5E5;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-primary);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
+      line-height: 1.6;
     }
 
-    .container {
-      max-width: 420px;
-      width: 100%;
-      text-align: center;
-    }
-
-    /* Logo */
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 12px;
-    }
-
-    /* Brand */
-    .brand-name {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      color: var(--text-primary);
-      margin-bottom: 4px;
-    }
-
-    .brand-subtitle {
-      font-size: 13px;
-      color: var(--text-tertiary);
-      margin-bottom: 40px;
-    }
-
-    /* Headline */
-    .headline {
-      font-size: 26px;
-      font-weight: 600;
-      color: var(--text-primary);
-      line-height: 1.3;
-      margin-bottom: 12px;
-    }
-
-    .subheadline {
-      font-size: 15px;
-      color: var(--text-secondary);
-      margin-bottom: 32px;
-    }
-
-    /* Feature Chips */
-    .chips-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 32px;
-    }
-
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background-color: var(--primary-green-light);
-      color: var(--primary-green);
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    .chip svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
-    }
-
-    /* Premium text */
-    .premium-text {
-      font-size: 14px;
-      font-style: italic;
-      color: var(--text-secondary);
-      margin-bottom: 24px;
-    }
-
-    /* Navigation */
+    /* Navigation - Minimal */
     nav {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(247, 246, 243, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 12px 24px;
+      background: rgba(250, 250, 249, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 14px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -146,17 +71,17 @@
     .nav-brand {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       text-decoration: none;
     }
 
     .nav-brand img {
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
     }
 
     .nav-brand span {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 700;
       letter-spacing: 2px;
       color: var(--text-primary);
@@ -165,175 +90,609 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 8px;
     }
 
-    .nav-links a {
+    .nav-link {
       font-size: 14px;
       color: var(--text-secondary);
       text-decoration: none;
       font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s;
     }
 
-    .nav-links a:hover {
+    .nav-link:hover {
+      background: var(--primary-green-light);
       color: var(--primary-green);
     }
 
-    .nav-links .nav-cta {
+    .nav-cta {
       background: var(--primary-green);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 24px;
+      font-weight: 600;
     }
 
-    .nav-links .nav-cta:hover {
-      opacity: 0.9;
-      color: white;
+    .nav-cta:hover {
+      background: var(--primary-green-dark);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       nav {
-        padding: 10px 16px;
+        padding: 12px 16px;
       }
-      .nav-links {
-        gap: 12px;
-      }
-      .nav-links a:not(.nav-cta) {
+      .nav-link:not(.nav-cta) {
         display: none;
       }
     }
 
-    /* CTA Button */
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 24px 60px;
+      background: var(--bg-hero);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-green-light);
+      color: var(--primary-green);
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero-tagline {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 700px;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .hero-tagline .highlight {
+      color: var(--primary-green);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
     .cta-button {
-      display: inline-block;
-      background-color: var(--primary-green);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--primary-green);
       color: white;
       text-decoration: none;
-      padding: 16px 48px;
-      border-radius: 28px;
-      font-size: 16px;
+      padding: 18px 48px;
+      border-radius: 32px;
+      font-size: 18px;
       font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 12px rgba(31, 122, 77, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      box-shadow: 0 4px 20px rgba(31, 122, 77, 0.35);
     }
 
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(31, 122, 77, 0.4);
+      box-shadow: 0 8px 28px rgba(31, 122, 77, 0.45);
+      background: var(--primary-green-dark);
     }
 
     .cta-button:active {
       transform: translateY(0);
     }
 
-    /* Footer */
-    .footer {
-      margin-top: 48px;
-      font-size: 12px;
+    .cta-button svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .cta-subtext {
+      font-size: 14px;
       color: var(--text-tertiary);
     }
 
-    .footer a {
+    .cta-subtext strong {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 80px 24px;
+      background: white;
+    }
+
+    .features-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary-green);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-card {
+      background: var(--bg-color);
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--primary-green-light);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .feature-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--primary-green);
+    }
+
+    .feature-title {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+
+    .feature-description {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Value Props Section */
+    .value-props {
+      padding: 80px 24px;
+      background: var(--bg-color);
+    }
+
+    .value-props-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .value-item:last-child {
+      border-bottom: none;
+    }
+
+    .value-check {
+      width: 32px;
+      height: 32px;
+      background: var(--primary-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .value-check svg {
+      width: 18px;
+      height: 18px;
+      color: white;
+    }
+
+    .value-text h4 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .value-text p {
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    /* Final CTA Section */
+    .final-cta {
+      padding: 100px 24px;
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+      text-align: center;
+    }
+
+    .final-cta-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .final-cta p {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 32px;
+    }
+
+    .cta-button-light {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: white;
+      color: var(--primary-green);
+      text-decoration: none;
+      padding: 18px 48px;
+      border-radius: 32px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button-light:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .final-cta .cta-subtext {
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 16px;
+    }
+
+    .final-cta .cta-subtext strong {
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background: white;
+      padding: 40px 24px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .footer-brand span {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-primary);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-green);
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    .footer-copyright a {
       color: var(--primary-green);
       text-decoration: none;
     }
 
     /* Responsive */
-    @media (max-width: 480px) {
-      .headline {
-        font-size: 22px;
+    @media (max-width: 640px) {
+      .hero {
+        padding: 90px 20px 50px;
       }
 
-      .logo {
-        width: 64px;
-        height: 64px;
+      .features {
+        padding: 60px 20px;
       }
 
-      .brand-name {
-        font-size: 24px;
+      .value-props {
+        padding: 60px 20px;
+      }
+
+      .final-cta {
+        padding: 70px 20px;
+      }
+
+      .feature-card {
+        padding: 24px;
+      }
+
+      .cta-button, .cta-button-light {
+        padding: 16px 36px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 320px;
       }
     }
   </style>
-
-  <script>
-    function openApp(event) {
-      // On mobile, just navigate normally
-      if (window.innerWidth <= 480) {
-        return true;
-      }
-
-      // On desktop, open in a mobile-sized popup window
-      event.preventDefault();
-      const width = 390;
-      const height = 844;
-      const left = (screen.width - width) / 2;
-      const top = (screen.height - height) / 2;
-
-      window.open(
-        '/app',
-        'FormaApp',
-        `width=${width},height=${height},left=${left},top=${top},menubar=no,toolbar=no,location=no,status=no,resizable=yes,scrollbars=yes`
-      );
-    }
-  </script>
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- Minimal Navigation -->
   <nav>
     <a href="/" class="nav-brand">
       <img src="logo-green.png" alt="Forma">
       <span>FORMA</span>
     </a>
     <div class="nav-links">
-      <a href="/pricing.html">Pricing</a>
-      <a href="/family.html">Families</a>
-      <a href="/enterprise.html">Parishes</a>
+      <a href="/pricing.html" class="nav-link">Pricing</a>
+      <a href="/app" class="nav-link">Login</a>
+      <a href="/signup.html" class="nav-link nav-cta">Start Free Trial</a>
     </div>
   </nav>
 
-  <div class="container">
-    <!-- Logo -->
-    <img src="logo-green.png" alt="Forma Logo" class="logo">
-
-    <!-- Brand -->
-    <h1 class="brand-name">FORMA</h1>
-    <p class="brand-subtitle">A Catholic formation app by VirtueForma</p>
-
-    <!-- Headline -->
-    <h2 class="headline">Faith that ignites daily.</h2>
-    <p class="subheadline">Designed for prayer, discipline, and community.</p>
-
-    <!-- Feature Chips -->
-    <div class="chips-container">
-      <span class="chip">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        No ads. Ever.
-      </span>
-      <span class="chip">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm5 16H7v-2h10v2zm-6.7-4L7 10.7l1.4-1.4 1.9 1.9 5.3-5.3L17 7.3 10.3 14z"/></svg>
-        Works offline
-      </span>
-      <span class="chip">
-        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-        Faith community
-      </span>
-      <span class="chip">
-        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        10% to charity
-      </span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      30-Day Free Trial
     </div>
 
-    <!-- Premium Text -->
-    <p class="premium-text">Premium by design. Priced for the whole Church.</p>
+    <h1 class="hero-tagline">
+      A <span class="highlight">Premium</span> Product<br>
+      Priced for Your Whole Church
+    </h1>
 
-    <!-- CTA -->
-    <a href="/app" class="cta-button" onclick="openApp(event)">Get Started</a>
+    <p class="hero-subtitle">
+      The complete Catholic formation app your parish deserves.
+      Track spiritual habits, build genuine community, and grow together in faith.
+    </p>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2025 VirtueForma. Made with love for the Church.</p>
-      <p>Follow us on <a href="https://instagram.com/virtueformation" target="_blank" rel="noopener">Instagram</a></p>
-    </footer>
-  </div>
+    <div class="hero-cta-group">
+      <a href="/signup.html" class="cta-button">
+        Start My Free Trial
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <p class="cta-subtext"><strong>No credit card required</strong> &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="features-container">
+      <div class="section-header">
+        <p class="section-label">Why Forma</p>
+        <h2 class="section-title">Everything your community needs</h2>
+        <p class="section-subtitle">
+          Built specifically for Catholic parishes and families who want to grow in faith together.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h3 class="feature-title">Unite Your Community</h3>
+          <p class="feature-description">
+            Bring your entire parish together with shared prayer intentions, announcements, and a faith-focused social feed. Everyone stays connected.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <h3 class="feature-title">Track Spiritual Growth</h3>
+          <p class="feature-description">
+            Log prayers, Mass attendance, Scripture reading, and acts of service. Build holy habits with streaks, achievements, and gentle encouragement.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+          </div>
+          <h3 class="feature-title">Works Everywhere</h3>
+          <p class="feature-description">
+            Available on iOS, Android, and web. Your members can access Forma at church, at home, or on the go. Works offline too.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3 class="feature-title">Built on Values</h3>
+          <p class="feature-description">
+            No ads, ever. No data selling. 10% of our revenue goes to Catholic charities. We exist to serve the Church, not advertisers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Props Section -->
+  <section class="value-props">
+    <div class="value-props-container">
+      <div class="section-header">
+        <p class="section-label">What You Get</p>
+        <h2 class="section-title">Premium features, affordable pricing</h2>
+      </div>
+
+      <div class="value-item">
+        <div class="value-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="value-text">
+          <h4>One price covers everyone</h4>
+          <p>Unlike per-user pricing that punishes growth, your entire parish or family gets access for one simple flat rate.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="value-text">
+          <h4>Generous 30-day free trial</h4>
+          <p>Experience everything Forma offers with your community before deciding. No credit card required to start.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="value-text">
+          <h4>Setup in minutes, not months</h4>
+          <p>Create your parish account, invite members with a code, and you're ready. No IT department needed.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="value-text">
+          <h4>Designed for Catholics, by Catholics</h4>
+          <p>Every feature is thoughtfully built for Catholic spirituality: liturgical seasons, feast days, examens, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta">
+    <div class="final-cta-content">
+      <h2>Ready to transform your community?</h2>
+      <p>
+        Join parishes and families already growing in faith together with Forma.
+        Start your free trial today.
+      </p>
+      <a href="/signup.html" class="cta-button-light">
+        Start My Free Trial
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <p class="cta-subtext"><strong>30 days free</strong> &middot; No credit card required</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="logo-green.png" alt="Forma">
+        <span>FORMA</span>
+      </div>
+      <div class="footer-links">
+        <a href="/pricing.html">Pricing</a>
+        <a href="/family.html">For Families</a>
+        <a href="/enterprise.html">For Parishes</a>
+        <a href="/app">Login</a>
+      </div>
+      <p class="footer-copyright">
+        &copy; 2025 VirtueForma. Made with love for the Church.<br>
+        <a href="https://instagram.com/virtueformation" target="_blank" rel="noopener">@virtueformation</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
