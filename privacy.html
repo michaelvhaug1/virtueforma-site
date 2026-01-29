@@ -232,9 +232,9 @@
       <h1>Privacy Policy</h1>
       <p class="subtitle">Forma by VirtueForma</p>
       <div class="meta-grid">
-        <div class="meta-item"><strong>Effective date:</strong> <span>January 6, 2025</span></div>
-        <div class="meta-item"><strong>Last updated:</strong> <span>January 22, 2025</span></div>
-        <div class="meta-item"><strong>Version:</strong> <span>1.0</span></div>
+        <div class="meta-item"><strong>Effective date:</strong> <span>January 6, 2026</span></div>
+        <div class="meta-item"><strong>Last updated:</strong> <span>January 29, 2026</span></div>
+        <div class="meta-item"><strong>Version:</strong> <span>0.6</span></div>
         <div class="meta-item"><strong>Operator:</strong> <span>VirtueForma</span></div>
         <div class="meta-item"><strong>Support:</strong> <span>support@virtueforma.faith</span></div>
         <div class="meta-item"><strong>Region:</strong> <span>United States</span></div>
@@ -256,8 +256,9 @@
           <li>Email address (for login and email verification)</li>
           <li>User ID and authentication identifiers</li>
           <li>Email verification status</li>
+          <li>Authentication method (email/password, Google Sign-In, or Apple Sign-In)</li>
         </ul>
-        <p>Passwords are handled by our authentication provider; we do not store plaintext passwords.</p>
+        <p>When you use Google Sign-In or Apple Sign-In, we receive basic profile information (name, email) from those providers. Passwords are handled by our authentication provider; we do not store plaintext passwords.</p>
       </div>
 
       <div class="subsection">
@@ -265,6 +266,8 @@
         <ul>
           <li>Display name</li>
           <li>Timezone</li>
+          <li>Avatar selection (holy symbol icon)</li>
+          <li>Frame style and accent color preferences</li>
           <li>Experience title, level, points, join date (generated/derived by the Service)</li>
           <li>Nonprofit preference (which nonprofit you support)</li>
           <li>Optional parish affiliation (parish name, city, state)</li>
@@ -306,16 +309,27 @@
       <div class="subsection">
         <h3>F) Payment and Subscription Data</h3>
         <ul>
-          <li>Subscription status (active, canceled, expired)</li>
-          <li>Subscription plan (monthly or yearly)</li>
-          <li>Payment transaction identifiers</li>
+          <li>Subscription status (active, canceled, expired, trial)</li>
+          <li>Subscription plan type (individual monthly, individual yearly, family monthly, family yearly, family plus)</li>
+          <li>Payment transaction identifiers from App Store or Google Play</li>
           <li>Billing cycle dates</li>
+          <li>Family plan membership (if applicable)</li>
         </ul>
-        <p>We use Apple App Store and Google Play for payment processing. They collect and process payment details directly. We do not store full payment card numbers on our servers.</p>
+        <p>Payments are processed through the Apple App Store (iOS) or Google Play Store (Android). We do not have access to your full payment card details. See Apple's and Google's respective privacy policies for details on their data handling.</p>
       </div>
 
       <div class="subsection">
-        <h3>G) Technical and Security Data</h3>
+        <h3>G) Family Plan Data (If Using a Family Subscription)</h3>
+        <ul>
+          <li>Family membership status (owner or member)</li>
+          <li>Family group identifier</li>
+          <li>Which family plan you belong to</li>
+        </ul>
+        <p>Family membership does not grant other family members access to your personal activity data or profile details beyond what is already visible to friends.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>H) Technical and Security Data</h3>
         <ul>
           <li>Basic logs needed for security and reliability (e.g., IP address, request timestamps, error logs)</li>
           <li>Used for abuse prevention, debugging, and protecting the Service</li>
@@ -324,7 +338,7 @@
     </section>
 
     <section>
-      <h2>3) What Others Can See</h2>
+      <h2>3) What Others Can See (and Where)</h2>
 
       <div class="subsection">
         <h3>A) Global Friend Suggestions (In-App Discovery)</h3>
@@ -363,6 +377,7 @@
           <li>You CAN be added as a friend from a group that is associated with a parish, if you are a member of that group</li>
           <li>You may opt in or out of appearing in friend suggestions at any time</li>
         </ul>
+        <p>This design ensures that simply attending a parish does not expose your profile to strangers. Connection requires mutual participation in a group or direct sharing of your friend code.</p>
       </div>
 
       <div class="subsection">
@@ -405,7 +420,7 @@
 
     <section>
       <h2>6) Analytics / Tracking</h2>
-      <p>We do not use third-party advertising trackers. We do not intend to use third-party analytics SDKs unless we disclose them here.</p>
+      <p>We do not use third-party advertising trackers. We do not use third-party analytics SDKs unless disclosed here.</p>
     </section>
 
     <section>
@@ -414,7 +429,7 @@
       <ul>
         <li>With your friends as described above (when you use social features)</li>
         <li>With group members (when you participate in groups)</li>
-        <li>With service providers needed to operate the Service (e.g., authentication, hosting, database, payment processing)</li>
+        <li>With service providers needed to operate the Service (e.g., authentication, hosting, database, payment processing via App Store and Google Play)</li>
         <li>For legal and safety reasons when required by law or to protect users and the Service</li>
       </ul>
       <p><strong>We do NOT sell your personal information to anyone for any reason.</strong></p>
@@ -431,6 +446,7 @@
         <li>We delete data from active systems within 14 days, and</li>
         <li>Backup copies are retained for up to 30 days before being permanently deleted through normal backup rotation.</li>
       </ul>
+      <p>This 30-day backup retention period allows us to recover from accidental deletions or system failures while ensuring your data is fully removed within a reasonable timeframe.</p>
     </section>
 
     <section>
@@ -446,7 +462,7 @@
 
     <section>
       <h2>10) Security</h2>
-      <p>We use reasonable safeguards appropriate for a small service (e.g., encryption in transit via HTTPS and managed infrastructure access controls). No system is perfectly secure; use a strong password and avoid reusing passwords.</p>
+      <p>We use reasonable safeguards (e.g., encryption in transit via HTTPS and managed infrastructure access controls). No system is perfectly secure; use a strong password and avoid reusing passwords.</p>
     </section>
 
     <section>
@@ -467,7 +483,7 @@
       <a href="/privacy.html">Privacy Policy</a>
     </div>
     <p class="footer-copyright">
-      &copy; 2025 VirtueForma. All rights reserved.
+      &copy; 2026 VirtueForma. All rights reserved.
     </p>
   </footer>
 </body>
