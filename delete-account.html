@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Your Account - Forma by VirtueForma</title>
+  <meta name="description" content="Request deletion of your Forma account and associated data.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo-green.png">
+
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-green: #1F7A4D;
+      --primary-green-dark: #165C3A;
+      --primary-green-light: #E6F4EE;
+      --bg-color: #FAFAF9;
+      --text-primary: #1B1B1B;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
+      --surface: #FFFFFF;
+      --border: #E5E5E5;
+      --warning-bg: #FEF3E6;
+      --warning-border: #F59E0B;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background: white;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      width: 36px;
+      height: 36px;
+    }
+
+    .nav-brand span {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-primary);
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: var(--primary-green-light);
+      color: var(--primary-green);
+    }
+
+    /* Main Content */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .header-card {
+      background: var(--primary-green-light);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+
+    .header-card h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-green-dark);
+      margin-bottom: 8px;
+    }
+
+    .header-card .subtitle {
+      font-size: 16px;
+      color: var(--primary-green);
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-green-light);
+    }
+
+    section p, section ul {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    section ul {
+      padding-left: 24px;
+    }
+
+    section li {
+      margin-bottom: 8px;
+    }
+
+    .warning-box {
+      background: var(--warning-bg);
+      border-left: 4px solid var(--warning-border);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+    }
+
+    .warning-box p {
+      color: var(--text-primary);
+      margin-bottom: 0;
+    }
+
+    .steps-list {
+      counter-reset: step-counter;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .steps-list li {
+      counter-increment: step-counter;
+      position: relative;
+      padding-left: 48px;
+      margin-bottom: 20px;
+    }
+
+    .steps-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--primary-green);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .email-link {
+      color: var(--primary-green);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+    }
+
+    .data-table th,
+    .data-table td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .data-table th {
+      background: var(--primary-green-light);
+      color: var(--primary-green-dark);
+      font-weight: 600;
+    }
+
+    .data-table td {
+      color: var(--text-secondary);
+    }
+
+    /* Footer */
+    footer {
+      background: white;
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-green);
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 32px 16px;
+      }
+
+      .header-card {
+        padding: 24px;
+      }
+
+      .header-card h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-brand">
+      <img src="logo-green.png" alt="Forma">
+      <span>FORMA</span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="header-card">
+      <h1>Delete Your Account</h1>
+      <p class="subtitle">Request deletion of your Forma account and data</p>
+    </div>
+
+    <div class="warning-box">
+      <p><strong>This action is permanent.</strong> Once your account is deleted, your data cannot be recovered. Please export your data first if you want to keep a copy.</p>
+    </div>
+
+    <section>
+      <h2>How to Delete Your Account</h2>
+      <p>You can delete your Forma account using either of these methods:</p>
+
+      <ul class="steps-list">
+        <li>
+          <strong>In-App Deletion (Recommended)</strong><br>
+          Open Forma > Go to Settings > Scroll to "Delete Account" > Confirm deletion
+        </li>
+        <li>
+          <strong>Email Request</strong><br>
+          Send an email to <a href="mailto:support@virtueforma.faith?subject=Account%20Deletion%20Request" class="email-link">support@virtueforma.faith</a> from the email address associated with your account. Include "Account Deletion Request" in the subject line.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What Gets Deleted</h2>
+      <p>When you delete your account, the following data is permanently removed:</p>
+      <table class="data-table">
+        <tr>
+          <th>Data Type</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>Account & Profile</td>
+          <td>Deleted (email, display name, avatar, preferences)</td>
+        </tr>
+        <tr>
+          <td>Activity History</td>
+          <td>Deleted (all logged activities, timestamps, comments)</td>
+        </tr>
+        <tr>
+          <td>Friends & Social</td>
+          <td>Deleted (friend connections, feed posts, reactions)</td>
+        </tr>
+        <tr>
+          <td>Groups</td>
+          <td>Membership removed; posts you made are deleted</td>
+        </tr>
+        <tr>
+          <td>Badges & Progress</td>
+          <td>Deleted (all badges, streaks, points, levels)</td>
+        </tr>
+        <tr>
+          <td>Subscription</td>
+          <td>Canceled (no further charges; manage via App Store/Google Play)</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Retention Period</h2>
+      <p>After you request deletion:</p>
+      <ul>
+        <li><strong>Active systems:</strong> Data is removed within 14 days</li>
+        <li><strong>Backups:</strong> Retained for up to 30 days, then permanently deleted through normal backup rotation</li>
+      </ul>
+      <p>This retention period allows us to recover from accidental deletions while ensuring your data is fully removed within a reasonable timeframe.</p>
+    </section>
+
+    <section>
+      <h2>Before You Delete</h2>
+      <p>Consider these options before deleting your account:</p>
+      <ul>
+        <li><strong>Export your data:</strong> Go to Settings > Export My Data to download a copy of all your information</li>
+        <li><strong>Cancel subscription only:</strong> If you just want to stop paying, you can cancel your subscription through the App Store or Google Play without deleting your account</li>
+        <li><strong>Take a break:</strong> Your account will remain intact if you simply stop using the app</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Questions?</h2>
+      <p>If you have questions about account deletion or your data, contact us at <a href="mailto:support@virtueforma.faith" class="email-link">support@virtueforma.faith</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+    <p class="footer-copyright">
+      &copy; 2026 VirtueForma. All rights reserved.
+    </p>
+  </footer>
+</body>
+</html>
