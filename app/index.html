@@ -1,38 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/app/">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="sanctify_app">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forma Web - Coming April 2026</title>
+  <meta name="description" content="Forma for Web is coming April 2026. Download the iOS app now.">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="../logo-green.png">
 
-  <title>sanctify_app</title>
-  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #F7F6F3;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 420px;
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: #1B1B1B;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: #1F7A4D;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    p {
+      color: #5C5C5C;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    a.cta {
+      display: inline-block;
+      background: #1F7A4D;
+      color: white;
+      padding: 16px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    a.cta:hover {
+      background: #165C3A;
+    }
+    .timeline {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid #E5E5E5;
+    }
+    .timeline h3 {
+      font-size: 14px;
+      color: #8A8A8A;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .timeline-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+    }
+    .timeline-item .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot.live { background: #1F7A4D; }
+    .dot.soon { background: #C9A227; }
+    .timeline-item span {
+      color: #5C5C5C;
+    }
+    .timeline-item strong {
+      color: #1B1B1B;
+    }
+  </style>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <div class="container">
+    <img src="../logo-green.png" alt="Forma" class="logo">
+    <h1>Forma for Web</h1>
+    <p class="subtitle">Coming April 2026</p>
+    <p>
+      We're working hard to bring Forma to your browser.
+      In the meantime, download the iOS app to start your faith journey today.
+    </p>
+    <a href="https://apps.apple.com/app/forma-catholic-habits/id6739592003" class="cta">
+      Download for iOS
+    </a>
+
+    <div class="timeline">
+      <h3>Platform Roadmap</h3>
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="dot live"></div>
+          <span><strong>iOS</strong> — Available now</span>
+        </div>
+        <div class="timeline-item">
+          <div class="dot soon"></div>
+          <span><strong>Android</strong> — March 2026</span>
+        </div>
+        <div class="timeline-item">
+          <div class="dot soon"></div>
+          <span><strong>Web</strong> — April 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
