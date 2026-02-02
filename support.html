@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Forma by VirtueForma</title>
+  <meta name="description" content="Contact support for Forma, a Catholic formation app by VirtueForma.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo-green.png">
+
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-green: #1F7A4D;
+      --primary-green-dark: #165C3A;
+      --primary-green-light: #E6F4EE;
+      --bg-color: #FAFAF9;
+      --text-primary: #1B1B1B;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
+      --surface: #FFFFFF;
+      --border: #E5E5E5;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background: white;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      width: 36px;
+      height: 36px;
+    }
+
+    .nav-brand span {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-primary);
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: var(--primary-green-light);
+      color: var(--primary-green);
+    }
+
+    /* Main Content */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .header-card {
+      background: var(--primary-green-light);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .header-card h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-green-dark);
+      margin-bottom: 8px;
+    }
+
+    .header-card .subtitle {
+      font-size: 16px;
+      color: var(--primary-green);
+      margin-bottom: 24px;
+    }
+
+    .email-link {
+      display: inline-block;
+      background: var(--primary-green);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+
+    .email-link:hover {
+      background: var(--primary-green-dark);
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-green-light);
+    }
+
+    section p, section ul {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    section ul {
+      padding-left: 24px;
+    }
+
+    section li {
+      margin-bottom: 8px;
+    }
+
+    .response-note {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+
+    .response-note p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      background: white;
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-green);
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 32px 16px;
+      }
+
+      .header-card {
+        padding: 24px;
+      }
+
+      .header-card h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-brand">
+      <img src="logo-green.png" alt="Forma">
+      <span>FORMA</span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="header-card">
+      <h1>Contact Support</h1>
+      <p class="subtitle">We're here to help with any questions about Forma</p>
+      <a href="mailto:support@virtueforma.faith" class="email-link">support@virtueforma.faith</a>
+    </div>
+
+    <section>
+      <h2>How Can We Help?</h2>
+      <p>Our support team is available to assist you with:</p>
+      <ul>
+        <li><strong>Account issues</strong> - Login problems, password resets, email verification</li>
+        <li><strong>Subscription questions</strong> - Billing inquiries, plan changes, family plan setup</li>
+        <li><strong>Technical support</strong> - App not working correctly, sync issues, bug reports</li>
+        <li><strong>Feature questions</strong> - How to use activities, streaks, badges, groups, or parishes</li>
+        <li><strong>Data requests</strong> - Export your data, account deletion, privacy questions</li>
+        <li><strong>Feedback and suggestions</strong> - Ideas for new features or improvements</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Before You Contact Us</h2>
+      <p>For the fastest resolution, please include:</p>
+      <ul>
+        <li>The email address associated with your Forma account</li>
+        <li>A description of the issue you're experiencing</li>
+        <li>Your device type (iPhone, Android) and app version if reporting a technical issue</li>
+        <li>Screenshots if applicable</li>
+      </ul>
+    </section>
+
+    <div class="response-note">
+      <p>We typically respond within 1-2 business days. For urgent account security issues, please include "URGENT" in your subject line.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+    </div>
+    <p class="footer-copyright">
+      &copy; 2026 VirtueForma. All rights reserved.
+    </p>
+  </footer>
+</body>
+</html>
