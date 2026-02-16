@@ -5,580 +5,286 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service - Forma by VirtueForma</title>
   <meta name="description" content="Terms of Service for Forma, a Catholic formation app by VirtueForma.">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo-green.png">
-
-  <!-- Google Fonts - Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --primary-green: #1F7A4D;
-      --primary-green-dark: #165C3A;
       --primary-green-light: #E6F4EE;
-      --bg-color: #FAFAF9;
+      --bg-color: #F7F6F3;
       --text-primary: #1B1B1B;
       --text-secondary: #5C5C5C;
       --text-tertiary: #8A8A8A;
       --surface: #FFFFFF;
-      --border: #E5E5E5;
     }
-
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-primary);
+      padding: 24px;
       line-height: 1.6;
     }
-
-    /* Navigation */
-    nav {
-      background: white;
-      padding: 14px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .nav-brand img {
-      width: 36px;
-      height: 36px;
-    }
-
-    .nav-brand span {
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: var(--text-primary);
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
-
-    .nav-links a:hover {
-      background: var(--primary-green-light);
-      color: var(--primary-green);
-    }
-
-    /* Main Content */
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
-
+    .container { max-width: 720px; margin: 0 auto; }
+    .back-link { display: inline-block; margin-bottom: 24px; color: var(--primary-green); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .back-link:hover { text-decoration: underline; }
     .header-card {
       background: var(--primary-green-light);
-      border-radius: 16px;
-      padding: 32px;
+      border-radius: 12px;
+      padding: 24px;
       margin-bottom: 32px;
     }
-
-    .header-card h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--primary-green-dark);
-      margin-bottom: 8px;
-    }
-
-    .header-card .subtitle {
-      font-size: 16px;
-      color: var(--primary-green);
-      margin-bottom: 20px;
-    }
-
-    .meta-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 12px;
-    }
-
-    .meta-item {
-      font-size: 14px;
-    }
-
-    .meta-item strong {
-      color: var(--primary-green-dark);
-    }
-
-    .meta-item span {
-      color: var(--text-secondary);
-    }
-
-    section {
-      margin-bottom: 32px;
-    }
-
-    section h2 {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--primary-green-light);
-    }
-
-    section p, section ul {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    section ul {
-      padding-left: 24px;
-    }
-
-    section li {
-      margin-bottom: 8px;
-    }
-
-    .subsection {
-      margin-top: 16px;
-      margin-bottom: 16px;
-    }
-
-    .subsection h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-    }
-
-    .legal-caps {
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 0.5px;
-    }
-
-    /* Footer */
-    footer {
-      background: white;
-      padding: 32px 24px;
-      text-align: center;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      font-size: 14px;
-      color: var(--text-secondary);
-      text-decoration: none;
-    }
-
-    .footer-links a:hover {
-      color: var(--primary-green);
-    }
-
-    .footer-copyright {
-      font-size: 13px;
-      color: var(--text-tertiary);
-    }
-
-    @media (max-width: 640px) {
-      main {
-        padding: 32px 16px;
-      }
-
-      .header-card {
-        padding: 24px;
-      }
-
-      .header-card h1 {
-        font-size: 24px;
-      }
-    }
+    .header-card h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+    .header-card .subtitle { font-size: 15px; color: var(--text-secondary); margin-bottom: 16px; }
+    .meta-row { font-size: 13px; margin-bottom: 2px; }
+    .meta-row strong { display: inline-block; width: 120px; color: var(--text-secondary); }
+    h2 { font-size: 18px; font-weight: 600; margin: 28px 0 12px; }
+    p, li { font-size: 15px; color: var(--text-secondary); margin-bottom: 8px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    .caps { text-transform: uppercase; }
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #ddd; font-size: 12px; color: var(--text-tertiary); text-align: center; }
+    .footer a { color: var(--primary-green); text-decoration: none; }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/" class="nav-brand">
-      <img src="logo-green.png" alt="Forma">
-      <span>FORMA</span>
-    </a>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/privacy.html">Privacy Policy</a>
-    </div>
-  </nav>
+  <div class="container">
+    <a href="/" class="back-link">&larr; Back to Forma</a>
 
-  <main>
     <div class="header-card">
       <h1>Terms of Service</h1>
       <p class="subtitle">Forma by VirtueForma</p>
-      <div class="meta-grid">
-        <div class="meta-item"><strong>Effective date:</strong> <span>January 6, 2026</span></div>
-        <div class="meta-item"><strong>Last updated:</strong> <span>January 29, 2026</span></div>
-        <div class="meta-item"><strong>Version:</strong> <span>0.6</span></div>
-        <div class="meta-item"><strong>Operator:</strong> <span>VirtueForma</span></div>
-        <div class="meta-item"><strong>Support:</strong> <span>support@virtueforma.faith</span></div>
-        <div class="meta-item"><strong>Jurisdiction:</strong> <span>United States</span></div>
-      </div>
+      <div class="meta-row"><strong>Effective date:</strong> January 6, 2026</div>
+      <div class="meta-row"><strong>Last updated:</strong> February 15, 2026</div>
+      <div class="meta-row"><strong>Version:</strong> 1.1</div>
+      <div class="meta-row"><strong>Operator:</strong> VirtueForma</div>
+      <div class="meta-row"><strong>Support:</strong> support@virtueforma.faith</div>
+      <div class="meta-row"><strong>Jurisdiction:</strong> United States</div>
     </div>
 
-    <section>
-      <h2>1) What Forma Is (and Is Not)</h2>
-      <p>Forma is a Catholic habit-tracking and community app focused on prayer, worship, formation, and fellowship. It is designed to encourage users through non-invasive activity sharing, groups, and parish community features.</p>
-      <p><strong>Forma is not:</strong></p>
-      <ul>
-        <li>A sacramental tracker</li>
-        <li>A measure of holiness or moral score</li>
-        <li>Spiritual direction or pastoral counseling</li>
-        <li>Medical, mental health, legal, or financial advice</li>
-      </ul>
-    </section>
+    <h2>1) What Forma is (and is not)</h2>
+    <p>Forma is a Catholic habit-tracking and community app focused on prayer, worship, formation, and fellowship. It is designed to encourage users through non-invasive activity sharing, groups, and parish community features.</p>
+    <p>Forma is not:</p>
+    <ul>
+      <li>a sacramental tracker,</li>
+      <li>a measure of holiness or moral score,</li>
+      <li>spiritual direction or pastoral counseling,</li>
+      <li>or medical, mental health, legal, or financial advice.</li>
+    </ul>
 
-    <section>
-      <h2>2) Operator Identity</h2>
-      <p>The Service is operated by VirtueForma. Operator details may be updated as the business structure evolves. Continued use after updates indicates acceptance of the updated Terms.</p>
-    </section>
+    <h2>2) Operator identity</h2>
+    <p>The Service is operated by VirtueForma. Operator details may be updated as the business structure evolves. Continued use after updates indicates acceptance of the updated Terms.</p>
 
-    <section>
-      <h2>3) Eligibility; US-Only; Age</h2>
-      <p>You must be at least 13 years old to use the Service.</p>
-      <p>The Service is currently available to users located in the United States.</p>
-    </section>
+    <h2>3) Eligibility; US-only; age</h2>
+    <p>You must be at least 13 years old to use the Service.</p>
+    <p>The Service is currently available to users located in the United States.</p>
 
-    <section>
-      <h2>4) Accounts; Authentication; Security</h2>
-      <p>You may sign up using:</p>
-      <ul>
-        <li>Email and password (with email verification required)</li>
-        <li>Sign in with Apple</li>
-        <li>Sign in with Google</li>
-      </ul>
-      <p>When using third-party sign-in providers, their terms and privacy policies also apply.</p>
-      <p>You are responsible for maintaining the confidentiality of your credentials and all activity under your account.</p>
-      <p>You agree not to access accounts you do not own or attempt to bypass security controls.</p>
-    </section>
+    <h2>4) Accounts; authentication; security</h2>
+    <p>You may sign up using:</p>
+    <ul>
+      <li>Email and password (with email verification required)</li>
+      <li>Sign in with Apple</li>
+      <li>Sign in with Google</li>
+      <li>Continue without email (anonymous account with username and password)</li>
+    </ul>
+    <p>When using third-party sign-in providers, their terms and privacy policies also apply. Anonymous accounts may add an email address later to secure the account.</p>
+    <p>You are responsible for maintaining the confidentiality of your credentials and all activity under your account.</p>
+    <p>You agree not to access accounts you do not own or attempt to bypass security controls.</p>
 
-    <section>
-      <h2>5) User Content and Conduct Rules</h2>
-      <p>User-generated content includes (for example): display name, optional parish fields, and optional activity comments.</p>
-      <p><strong>You agree:</strong></p>
-      <ul>
-        <li>Do not post sensitive personal data in comments or profile fields (examples: confession details, sins, intentions, medical/mental health information, phone numbers, addresses, financial information, or children's information).</li>
-        <li>No harassment, threats, shaming, or targeted abuse.</li>
-        <li>No hateful, sexually explicit, unlawful, or otherwise abusive content.</li>
-        <li>No impersonation or misrepresentation of identity or affiliations.</li>
-      </ul>
-      <p>We may apply profanity filtering and other safety measures.</p>
-    </section>
+    <h2>5) User content and conduct rules</h2>
+    <p>User-generated content includes (for example): display name, optional parish fields, and optional activity comments.</p>
+    <p>You agree:</p>
+    <ul>
+      <li>Do not post sensitive personal data in comments or profile fields (examples: confession details, sins, intentions, medical/mental health information, phone numbers, addresses, financial information, or children's information).</li>
+      <li>No harassment, threats, shaming, or targeted abuse.</li>
+      <li>No hateful, sexually explicit, unlawful, or otherwise abusive content.</li>
+      <li>No impersonation or misrepresentation of identity or affiliations.</li>
+    </ul>
+    <p>We may apply profanity filtering and other safety measures.</p>
 
-    <section>
-      <h2>6) Profile Customization</h2>
-      <p>Forma allows you to personalize your profile with:</p>
-      <ul>
-        <li>Display name</li>
-        <li>Avatar icons (holy symbols)</li>
-        <li>Frame styles (decorative borders)</li>
-        <li>Accent colors (liturgically-inspired palette)</li>
-      </ul>
-      <p>All avatar icons are available to all users without restrictions. Some frames and colors may unlock as you progress in the app.</p>
-      <p>Your customizations are visible to friends and in contexts where your profile appears (feed, groups, etc.).</p>
-    </section>
+    <h2>6) Profile customization</h2>
+    <p>Forma allows you to personalize your profile with:</p>
+    <ul>
+      <li>Display name</li>
+      <li>Avatar icons (holy symbols)</li>
+      <li>Frame styles (decorative borders)</li>
+      <li>Accent colors (liturgically-inspired palette)</li>
+    </ul>
+    <p>All avatar icons are available to all users without restrictions. Some frames and colors may unlock as you progress in the app.</p>
+    <p>Your customizations are visible to friends and in contexts where your profile appears (feed, groups, etc.).</p>
 
-    <section>
-      <h2>7) Notifications</h2>
-      <p>Forma may send you notifications including:</p>
-      <ul>
-        <li>Reminder notifications for daily habits and routines</li>
-        <li>Social notifications (friend requests, reactions, group activity)</li>
-        <li>Weekly digest summaries</li>
-        <li>System notifications (account security, policy updates)</li>
-      </ul>
-      <p>You can manage notification preferences in the app settings and your device settings. Push notifications require your permission and can be disabled at any time.</p>
-    </section>
+    <h2>7) Notifications</h2>
+    <p>Forma may send you notifications including:</p>
+    <ul>
+      <li>Reminder notifications for daily habits and routines</li>
+      <li>Social notifications (friend requests, reactions, group activity)</li>
+      <li>Weekly digest summaries</li>
+      <li>System notifications (account security, policy updates)</li>
+    </ul>
+    <p>You can manage notification preferences in the app settings and your device settings. Push notifications require your permission and can be disabled at any time.</p>
 
-    <section>
-      <h2>8) Visibility, Sharing, and Discovery Features</h2>
-      <p>Forma includes friends, a feed, reactions, badges, groups, parishes, and "friend suggestions."</p>
+    <h2>8) Visibility, sharing, and discovery features</h2>
+    <p>Forma includes friends, a feed, reactions, badges, groups, parishes, and "friend suggestions."</p>
 
-      <div class="subsection">
-        <h3>A) Global Friend Suggestions (In-App Discovery)</h3>
-        <p>When you are logged in, Forma may suggest other users to help you connect. Suggested users may show limited information such as:</p>
-        <ul>
-          <li>Display name</li>
-          <li>Experience title (e.g., Seeker, Pilgrim)</li>
-          <li>Level</li>
-          <li>Points</li>
-          <li>Badge count</li>
-          <li>Join date</li>
-        </ul>
-        <p>This is in-app discoverability (not a public website directory).</p>
-        <p>Not shown in global suggestions: nonprofit preference and parish affiliation.</p>
-      </div>
+    <p><strong>A) Global friend suggestions (in-app discovery)</strong></p>
+    <p>When you are logged in, Forma may suggest other users to help you connect. Suggested users may show limited information such as:</p>
+    <ul>
+      <li>display name</li>
+      <li>experience title (e.g., Seeker, Pilgrim)</li>
+      <li>level</li>
+      <li>points</li>
+      <li>badge count</li>
+      <li>join date</li>
+    </ul>
+    <p>This is in-app discoverability (not a public website directory).</p>
+    <p>Not shown in global suggestions: nonprofit preference and parish affiliation.</p>
 
-      <div class="subsection">
-        <h3>B) Friends-Only Sharing (Feed and Friend Card)</h3>
-        <p>When you are friends with someone, the Service may show:</p>
-        <ul>
-          <li>Your display name</li>
-          <li>Your activity events in the feed (catalog activity + timestamp + optional short comment)</li>
-          <li>Emoji reactions</li>
-          <li>Badges and related progress displays</li>
-          <li>Nonprofit preference ("Currently supporting {Nonprofit}") on a friend card</li>
-          <li>Parish affiliation (if you have provided it)</li>
-        </ul>
-      </div>
+    <p><strong>B) Friends-only sharing (feed and friend card)</strong></p>
+    <p>When you are friends with someone, the Service may show:</p>
+    <ul>
+      <li>your display name</li>
+      <li>your activity events in the feed (catalog activity + timestamp + optional short comment)</li>
+      <li>emoji reactions</li>
+      <li>badges and related progress displays</li>
+      <li>nonprofit preference ("Following {Nonprofit}") on a friend card</li>
+      <li>parish affiliation (if you have provided it)</li>
+    </ul>
 
-      <div class="subsection">
-        <h3>C) Groups</h3>
-        <p>Groups are covenant-centered communities within Forma:</p>
-        <ul>
-          <li>Groups can be open (anyone can join) or closed (invite-only)</li>
-          <li>Group owners define a shared covenant (practice commitment)</li>
-          <li>Groups may be associated with one or more parishes</li>
-          <li>Group membership is visible to other group members</li>
-          <li>You can have up to 5 active groups at a time; completed groups don't count</li>
-        </ul>
-      </div>
+    <p><strong>C) Groups</strong></p>
+    <p>Groups are covenant-centered communities within Forma:</p>
+    <ul>
+      <li>Groups can be open (anyone can join) or closed (invite-only)</li>
+      <li>Group owners define a shared covenant (practice commitment)</li>
+      <li>Groups may be associated with one or more parishes</li>
+      <li>Group membership is visible to other group members</li>
+      <li>You can have up to 5 active groups at a time; completed groups don't count</li>
+    </ul>
 
-      <div class="subsection">
-        <h3>D) Parish Discovery (Privacy-Focused)</h3>
-        <p>The Parish Directory allows you to find parishes and groups associated with them. For your privacy:</p>
-        <ul>
-          <li>The Parish Directory does NOT list individual users who attend a parish</li>
-          <li>You CANNOT be added as a friend directly from a parish screen</li>
-          <li>You CAN be added as a friend from a group associated with a parish, if you are a member of that group</li>
-          <li>Your parish affiliation is visible only to your friends, not publicly</li>
-        </ul>
-        <p>This ensures that attending a parish does not automatically expose you to strangers. Connections require mutual group participation or direct sharing of your friend code.</p>
-      </div>
+    <p><strong>D) Parish discovery (privacy-focused)</strong></p>
+    <p>The Parish Directory allows you to find parishes and groups associated with them. For your privacy:</p>
+    <ul>
+      <li>The Parish Directory does NOT list individual users who attend a parish</li>
+      <li>You CANNOT be added as a friend directly from a parish screen</li>
+      <li>You CAN be added as a friend from a group associated with a parish, if you are a member of that group</li>
+      <li>Your parish affiliation is visible only to your friends, not publicly</li>
+    </ul>
+    <p>This ensures that attending a parish does not automatically expose you to strangers. Connections require mutual group participation or direct sharing of your friend code.</p>
 
-      <div class="subsection">
-        <h3>E) Discoverability and Hide-from-Suggestions Toggle</h3>
-        <p>By default, your profile is discoverable in friend suggestions. Forma includes a setting to hide your profile from global friend suggestions. If enabled, you will not appear in suggested users lists, but you may still be connectable by friend code/QR (and other explicit connection mechanisms).</p>
-      </div>
-    </section>
+    <p><strong>E) Discoverability and Hide-from-suggestions toggle</strong></p>
+    <p>By default, your profile is discoverable in friend suggestions. Forma includes a setting to hide your profile from global friend suggestions. If enabled, you will not appear in suggested users lists, but you may still be connectable by friend code/QR (and other explicit connection mechanisms).</p>
 
-    <section>
-      <h2>9) Moderation; Abuse; Enforcement</h2>
-      <p>We may remove content, restrict features, suspend, or terminate accounts if we believe it's necessary to:</p>
-      <ul>
-        <li>Enforce these Terms</li>
-        <li>Protect users</li>
-        <li>Prevent abuse or fraud</li>
-        <li>Comply with law</li>
-      </ul>
-    </section>
+    <h2>9) Moderation; abuse; enforcement</h2>
+    <p>We may remove content, restrict features, suspend, or terminate accounts if we believe it's necessary to:</p>
+    <ul>
+      <li>enforce these Terms,</li>
+      <li>protect users,</li>
+      <li>prevent abuse or fraud,</li>
+      <li>or comply with law.</li>
+    </ul>
 
-    <section>
-      <h2>10) Service Availability</h2>
-      <p>You understand:</p>
-      <ul>
-        <li>Features may change or be updated</li>
-        <li>The Service may be intermittently unavailable for maintenance</li>
-        <li>While we take precautions, data loss is possible</li>
-      </ul>
-    </section>
+    <h2>10) Service availability</h2>
+    <p>You understand:</p>
+    <ul>
+      <li>features may change or be updated,</li>
+      <li>the Service may be intermittently unavailable for maintenance,</li>
+      <li>and while we take precautions, data loss is possible.</li>
+    </ul>
 
-    <section>
-      <h2>11) Subscriptions and Payments</h2>
+    <h2>11) Subscriptions and payments</h2>
+    <p><strong>A) Subscription plans</strong></p>
+    <p>Forma offers optional paid subscriptions, including Individual and Family plans at various price points. Current pricing and plan details are displayed in the app before purchase. Individual plans may include a free trial for new subscribers.</p>
 
-      <div class="subsection">
-        <h3>A) Subscription Plans</h3>
-        <p>Forma offers optional paid subscriptions:</p>
-        <p><strong>Individual Plans:</strong></p>
-        <ul>
-          <li>Monthly: $4.99 per month</li>
-          <li>Yearly: $49.99 per year (discounted)</li>
-        </ul>
-        <p><strong>Family Plans:</strong></p>
-        <ul>
-          <li>Family Monthly: $6.99 per month (up to 7 members)</li>
-          <li>Family Yearly: $69.99 per year (up to 7 members)</li>
-          <li>Family Plus Monthly: $9.99 per month (up to 12 members)</li>
-          <li>Family Plus Yearly: $99.99 per year (up to 12 members)</li>
-        </ul>
-        <p>Individual plans include a 1-month free trial for new subscribers.</p>
-      </div>
+    <p><strong>B) Family sharing</strong></p>
+    <p>Family plans allow you to share premium features with family members:</p>
+    <ul>
+      <li>The plan owner manages family membership through the app</li>
+      <li>Family members are added via email invite or shareable invite link</li>
+      <li>When a family member signs up using an invited email address, they automatically receive premium access under the family plan &mdash; no separate purchase is required</li>
+      <li>Family members receive their own accounts with full premium access</li>
+      <li>Family membership does not grant access to other members' personal data</li>
+      <li>Removing a family member revokes their premium access</li>
+      <li>Invite codes expire after their set duration</li>
+    </ul>
 
-      <div class="subsection">
-        <h3>B) Family Sharing</h3>
-        <p>Family plans allow you to share premium features with family members:</p>
-        <ul>
-          <li>The plan owner manages family membership through the app</li>
-          <li>Family members receive their own accounts with full premium access</li>
-          <li>Family membership does not grant access to other members' personal data</li>
-          <li>Removing a family member revokes their premium access</li>
-        </ul>
-      </div>
+    <p><strong>C) Billing and auto-renewal</strong></p>
+    <p>Subscriptions automatically renew at the end of each billing period unless you cancel before the renewal date. You will be charged for the next period unless you cancel.</p>
 
-      <div class="subsection">
-        <h3>C) Billing and Auto-Renewal</h3>
-        <p>Subscriptions automatically renew at the end of each billing period unless you cancel before the renewal date. You will be charged for the next period unless you cancel.</p>
-      </div>
+    <p><strong>D) Payment processing</strong></p>
+    <p>Payments are processed through the Apple App Store (iOS) or Google Play Store (Android). By subscribing, you agree to their respective terms of service. We do not have access to your full payment card details.</p>
 
-      <div class="subsection">
-        <h3>D) Payment Processing</h3>
-        <p>Payments are processed through the Apple App Store (iOS) or Google Play Store (Android). By subscribing, you agree to their respective terms of service. We do not have access to your full payment card details.</p>
-      </div>
+    <p><strong>E) Cancellation</strong></p>
+    <p>You may cancel your subscription at any time through your device's subscription settings (App Store or Google Play). Cancellation takes effect at the end of your current billing period. You retain access to premium features until then.</p>
 
-      <div class="subsection">
-        <h3>E) Cancellation</h3>
-        <p>You may cancel your subscription at any time through your device's subscription settings (App Store or Google Play). Cancellation takes effect at the end of your current billing period. You retain access to premium features until then.</p>
-      </div>
+    <p><strong>F) Refunds</strong></p>
+    <p>Refund requests must be submitted through the Apple App Store or Google Play Store according to their respective refund policies. We do not process refunds directly.</p>
 
-      <div class="subsection">
-        <h3>F) Refunds</h3>
-        <p>Refund requests must be submitted through the Apple App Store or Google Play Store according to their respective refund policies. We do not process refunds directly.</p>
-      </div>
+    <p><strong>G) Price changes</strong></p>
+    <p>We may change subscription prices with notice. Price changes apply to the next billing cycle after notice is given.</p>
 
-      <div class="subsection">
-        <h3>G) Price Changes</h3>
-        <p>We may change subscription prices with notice. Price changes apply to the next billing cycle after notice is given.</p>
-      </div>
-    </section>
+    <h2>12) Community missions</h2>
+    <p><strong>A) Nature of the feature</strong></p>
+    <p>The app allows you to follow Catholic missions and causes from a curated list. This is an informational and community feature that helps you stay connected with organizations doing important work in the Church.</p>
 
-    <section>
-      <h2>12) Charitable Commitment (Nonprofit Donations)</h2>
+    <p><strong>B) Subscription payments</strong></p>
+    <p>Your subscription payment is a payment for app access and features only. Subscriptions are not donations and should not be claimed as tax-deductible charitable contributions.</p>
 
-      <div class="subsection">
-        <h3>A) How It Works</h3>
-        <p>Forma commits to donating 10% of subscription revenue to charitable nonprofits selected by users.</p>
-        <p>Each user may select a preferred nonprofit from the available options in the app. Your selection determines where your portion of the charitable commitment is directed.</p>
-      </div>
+    <p><strong>C) Curated list</strong></p>
+    <p>The list of featured missions is curated by the Operator. We may add or remove entries at our discretion.</p>
 
-      <div class="subsection">
-        <h3>B) Disbursement Threshold</h3>
-        <p>Donations to a given nonprofit are disbursed only after the accumulated amount for that nonprofit exceeds $50 by month-end. Amounts below this threshold are held in a temporary account controlled by the Operator until the threshold is reached.</p>
-      </div>
+    <h2>13) Good faith submissions</h2>
+    <p>Nonprofit and parish information submitted to the Service must be provided in good faith.</p>
 
-      <div class="subsection">
-        <h3>C) Holding Period</h3>
-        <p>If a nonprofit's accumulated donations do not reach the $50 threshold in a given month, the funds remain held and carry over to subsequent months until the threshold is met.</p>
-      </div>
+    <p><strong>A) Nonprofits</strong></p>
+    <p>Requests to add nonprofits must be for legitimate 501(c)(3) or equivalent charitable organizations. Submitting false, misleading, or fraudulent nonprofit information is a violation of these Terms.</p>
 
-      <div class="subsection">
-        <h3>D) Not a Tax-Deductible Donation</h3>
-        <p>Your subscription payment is a payment for services, not a charitable donation. The charitable commitment is made by the Operator, not by you. You should not claim your subscription as a tax-deductible charitable contribution.</p>
-      </div>
+    <p><strong>B) Parishes</strong></p>
+    <p>Parish information (name, location, affiliation) must be accurate. Submitting false parish information or attempting to impersonate parishes you are not authorized to represent is prohibited.</p>
 
-      <div class="subsection">
-        <h3>E) Nonprofit Selection</h3>
-        <p>The list of available nonprofits is curated by the Operator. We may add or remove nonprofits at our discretion. If your selected nonprofit is removed, you may choose a different one.</p>
-      </div>
-    </section>
+    <p><strong>C) Enforcement</strong></p>
+    <p>Abuse of nonprofit or parish submission features, including fraudulent submissions, spam, or bad-faith requests, may result in:</p>
+    <ul>
+      <li>removal of submitted content</li>
+      <li>restriction of submission privileges</li>
+      <li>suspension or termination of your account</li>
+    </ul>
+    <p>We reserve the right to verify submissions and reject or remove any content that appears fraudulent or in bad faith.</p>
 
-    <section>
-      <h2>13) Good Faith Submissions</h2>
-      <p>Nonprofit and parish information submitted to the Service must be provided in good faith.</p>
+    <h2>14) Intellectual property</h2>
+    <p>We own the Service and its software/design, except your user-generated content. You receive a limited, revocable, non-transferable license to use the Service for personal, non-commercial purposes.</p>
+    <p><strong>A) Logo and branding</strong></p>
+    <p>The logo and visual branding used in Forma are owned by VirtueForma. You may not use our branding without permission.</p>
 
-      <div class="subsection">
-        <h3>A) Nonprofits</h3>
-        <p>Requests to add nonprofits must be for legitimate 501(c)(3) or equivalent charitable organizations. Submitting false, misleading, or fraudulent nonprofit information is a violation of these Terms.</p>
-      </div>
+    <h2>15) Your license to us</h2>
+    <p>You grant us a limited license to host, store, process, and display your content as needed to operate the Service (for example, showing feed events to friends). This license ends when content is deleted from our active systems, subject to backup handling described in the Privacy Policy.</p>
 
-      <div class="subsection">
-        <h3>B) Parishes</h3>
-        <p>Parish information (name, location, affiliation) must be accurate. Submitting false parish information or attempting to impersonate parishes you are not authorized to represent is prohibited.</p>
-      </div>
+    <h2>16) Disclaimers</h2>
+    <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE." TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES.</p>
+    <p>WE DO NOT GUARANTEE UNINTERRUPTED OR ERROR-FREE SERVICE OR THAT CONTENT WILL ALWAYS BE PRESERVED.</p>
 
-      <div class="subsection">
-        <h3>C) Enforcement</h3>
-        <p>Abuse of nonprofit or parish submission features, including fraudulent submissions, spam, or bad-faith requests, may result in:</p>
-        <ul>
-          <li>Removal of submitted content</li>
-          <li>Restriction of submission privileges</li>
-          <li>Suspension or termination of your account</li>
-        </ul>
-        <p>We reserve the right to verify submissions and reject or remove any content that appears fraudulent or in bad faith.</p>
-      </div>
-    </section>
+    <h2>17) Limitation of liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE WILL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, PROFITS, OR GOODWILL.</p>
+    <p>OUR TOTAL LIABILITY FOR ANY CLAIM RELATING TO THE SERVICE WILL NOT EXCEED THE AMOUNT YOU PAID FOR THE SERVICE IN THE 12 MONTHS PRECEDING THE CLAIM, OR $50, WHICHEVER IS GREATER.</p>
 
-    <section>
-      <h2>14) Intellectual Property</h2>
-      <p>We own the Service and its software/design, except your user-generated content. You receive a limited, revocable, non-transferable license to use the Service for personal, non-commercial purposes.</p>
+    <h2>18) Account deletion; termination</h2>
+    <p>You may request deletion via in-app settings or by emailing support@virtueforma.faith from your verified account email.</p>
+    <p>We aim to complete deletion requests from active systems within 14 days (see Privacy Policy).</p>
+    <p>We may suspend or terminate your account for violations or safety reasons.</p>
 
-      <div class="subsection">
-        <h3>A) Logo and Branding</h3>
-        <p>The logo and visual branding used in Forma are owned by VirtueForma. You may not use our branding without permission.</p>
-      </div>
-    </section>
+    <h2>19) No advertising; independent operation</h2>
+    <p>Forma does not display third-party advertisements. We do not accept advertising or paid promotional placements.</p>
+    <p>Forma is independently operated with no outside investors. Your data and the Service are not influenced by investor demands or advertising revenue.</p>
 
-    <section>
-      <h2>15) Your License to Us</h2>
-      <p>You grant us a limited license to host, store, process, and display your content as needed to operate the Service (for example, showing feed events to friends). This license ends when content is deleted from our active systems, subject to backup handling described in the Privacy Policy.</p>
-    </section>
+    <h2>20) Changes to these Terms</h2>
+    <p>We may update these Terms. We will update the "Last updated" date and version. Material changes may be communicated in-app or by email.</p>
 
-    <section>
-      <h2>16) Disclaimers</h2>
-      <p class="legal-caps">THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE." TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES.</p>
-      <p class="legal-caps">WE DO NOT GUARANTEE UNINTERRUPTED OR ERROR-FREE SERVICE OR THAT CONTENT WILL ALWAYS BE PRESERVED.</p>
-    </section>
+    <h2>21) Governing law</h2>
+    <p>These Terms are governed by the laws of the State of Washington, United States, excluding conflict-of-law rules.</p>
 
-    <section>
-      <h2>17) Limitation of Liability</h2>
-      <p class="legal-caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE WILL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, PROFITS, OR GOODWILL.</p>
-      <p class="legal-caps">OUR TOTAL LIABILITY FOR ANY CLAIM RELATING TO THE SERVICE WILL NOT EXCEED THE AMOUNT YOU PAID FOR THE SERVICE IN THE 12 MONTHS PRECEDING THE CLAIM, OR $50, WHICHEVER IS GREATER.</p>
-    </section>
-
-    <section>
-      <h2>18) Account Deletion; Termination</h2>
-      <p>You may request deletion via in-app settings or by emailing support@virtueforma.faith from your verified account email.</p>
-      <p>We aim to complete deletion requests from active systems within 14 days (see Privacy Policy).</p>
-      <p>We may suspend or terminate your account for violations or safety reasons.</p>
-    </section>
-
-    <section>
-      <h2>19) No Advertising; Independent Operation</h2>
-      <p>Forma does not display third-party advertisements. We do not accept advertising or paid promotional placements.</p>
-      <p>Forma is independently operated with no outside investors. Your data and the Service are not influenced by investor demands or advertising revenue.</p>
-    </section>
-
-    <section>
-      <h2>20) Changes to These Terms</h2>
-      <p>We may update these Terms. We will update the "Last updated" date and version. Material changes may be communicated in-app or by email.</p>
-    </section>
-
-    <section>
-      <h2>21) Governing Law</h2>
-      <p>These Terms are governed by the laws of the State of Washington, United States, excluding conflict-of-law rules.</p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/terms.html">Terms of Service</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/support.html">Support</a>
-    </div>
-    <p class="footer-copyright">
-      &copy; 2026 VirtueForma. All rights reserved.
-    </p>
-  </footer>
+    <footer class="footer">
+      <p>&copy; 2026 VirtueForma. Made with love for the Church.</p>
+      <p style="margin-top: 8px;"><a href="/">Home</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms of Service</a></p>
+    </footer>
+  </div>
 </body>
 </html>
