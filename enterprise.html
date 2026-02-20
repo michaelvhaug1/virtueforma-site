@@ -32,6 +32,28 @@
       --border: #E0E0E0;
     }
 
+    /* Liturgical season color overrides */
+    :root[data-season="lent"] {
+      --primary-green: #6B4C8A;
+      --primary-green-dark: #3D2656;
+      --primary-green-light: #F0EAF4;
+    }
+    :root[data-season="advent"] {
+      --primary-green: #5C4D8A;
+      --primary-green-dark: #352B56;
+      --primary-green-light: #EDEAF4;
+    }
+    :root[data-season="easter"] {
+      --primary-green: #9E7E3A;
+      --primary-green-dark: #705A28;
+      --primary-green-light: #F8F2E4;
+    }
+    :root[data-season="christmas"] {
+      --primary-green: #9E7E3A;
+      --primary-green-dark: #705A28;
+      --primary-green-light: #F8F2E4;
+    }
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg-color);
@@ -593,5 +615,8 @@
       </div>
     </footer>
   </div>
+  <script>
+    (function(){function E(y){var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),M=Math.floor((h+l-7*m+114)/31),D=((h+l-7*m+114)%31)+1;return new Date(y,M-1,D)}var n=new Date(),y=n.getFullYear(),easter=E(y),ash=new Date(easter);ash.setDate(ash.getDate()-46);var hs=new Date(easter);hs.setDate(hs.getDate()-1);var pn=new Date(easter);pn.setDate(pn.getDate()+49);var xm=new Date(y,11,25),bp=new Date(y,0,13),ad=new Date(y,11,3);while(ad.getDay()!==0)ad.setDate(ad.getDate()-1);ad.setDate(ad.getDate()-21);var t=new Date(y,n.getMonth(),n.getDate());function r(d,s,e){return d>=s&&d<=e}var s='ordinary';if(r(t,ash,hs))s='lent';else if(r(t,easter,pn))s='easter';else if(r(t,ad,new Date(y,11,24)))s='advent';else if(r(t,xm,new Date(y,11,31))||r(t,new Date(y,0,1),bp))s='christmas';if(s!=='ordinary')document.documentElement.setAttribute('data-season',s)})();
+  </script>
 </body>
 </html>

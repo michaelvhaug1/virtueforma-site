@@ -41,30 +41,41 @@
       --gold: #C9A227;
     }
 
-    /* Liturgical season color overrides */
+    /* Liturgical season color overrides
+       Lent: warm desaturated violet (vestment-inspired, not neon)
+       Advent: cooler blue-violet (anticipation, twilight)
+       Easter/Christmas: muted antique gold (liturgical gold leaf) */
     :root[data-season="lent"] {
-      --primary-green: #7B1FA2;
-      --primary-green-dark: #6A1B8A;
-      --primary-green-light: #F3E5F5;
-      --bg-hero: linear-gradient(180deg, #FAF5FC 0%, #FFFFFF 100%);
+      --primary-green: #6B4C8A;
+      --primary-green-dark: #3D2656;
+      --primary-green-light: #F0EAF4;
+      --bg-color: #FAF8F5;
+      --bg-hero: linear-gradient(180deg, #F0EAF4 0%, #FAF8F5 50%, #FFFFFF 100%);
+      --border: #D8D0DE;
     }
     :root[data-season="advent"] {
-      --primary-green: #7B1FA2;
-      --primary-green-dark: #6A1B8A;
-      --primary-green-light: #F3E5F5;
-      --bg-hero: linear-gradient(180deg, #FAF5FC 0%, #FFFFFF 100%);
+      --primary-green: #5C4D8A;
+      --primary-green-dark: #352B56;
+      --primary-green-light: #EDEAF4;
+      --bg-color: #F8F7FA;
+      --bg-hero: linear-gradient(180deg, #EDEAF4 0%, #F8F7FA 50%, #FFFFFF 100%);
+      --border: #D4D0DE;
     }
     :root[data-season="easter"] {
-      --primary-green: #C8963E;
-      --primary-green-dark: #A67B2E;
-      --primary-green-light: #FFF8E1;
-      --bg-hero: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+      --primary-green: #9E7E3A;
+      --primary-green-dark: #705A28;
+      --primary-green-light: #F8F2E4;
+      --bg-color: #FAF8F3;
+      --bg-hero: linear-gradient(180deg, #F8F2E4 0%, #FAF8F3 50%, #FFFFFF 100%);
+      --border: #E0D8C8;
     }
     :root[data-season="christmas"] {
-      --primary-green: #C8963E;
-      --primary-green-dark: #A67B2E;
-      --primary-green-light: #FFF8E1;
-      --bg-hero: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+      --primary-green: #9E7E3A;
+      --primary-green-dark: #705A28;
+      --primary-green-light: #F8F2E4;
+      --bg-color: #FAF8F3;
+      --bg-hero: linear-gradient(180deg, #F8F2E4 0%, #FAF8F3 50%, #FFFFFF 100%);
+      --border: #E0D8C8;
     }
 
     .seasonal-banner {
