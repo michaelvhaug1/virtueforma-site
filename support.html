@@ -34,6 +34,14 @@
     }
 
     /* Liturgical season color overrides */
+    :root[data-season="lent"] img[src*="logo"],
+    :root[data-season="advent"] img[src*="logo"] {
+      filter: hue-rotate(122deg) saturate(0.5) brightness(1.4);
+    }
+    :root[data-season="easter"] img[src*="logo"],
+    :root[data-season="christmas"] img[src*="logo"] {
+      filter: hue-rotate(35deg) saturate(0.8) brightness(1.2);
+    }
     :root[data-season="lent"] {
       --primary-green: #6B4C8A;
       --primary-green-dark: #3D2656;
